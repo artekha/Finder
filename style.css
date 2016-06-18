@@ -1,0 +1,208 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background: #fff;
+  font-family: 'PT Sans', Arial;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.finder-window {
+  width: 800px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 20px 100px rgba(0,0,0,.3);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.finder-head {
+  background: linear-gradient(#f0f0f0, #eee);
+  height: 70px;
+}
+
+.finder-head__controls-list {
+  margin: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 80px;
+}
+
+.finder-head__controls-item {
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 1px;
+  font-size: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.finder-head__controls-item-close {
+  background: #ff6565;
+}
+.finder-head__controls-item-minimize {
+  background: #ffd67b;
+}
+.finder-head__controls-item-fullscreen {
+  background: #63da77;
+}
+
+.finder-head__controls-item-close:hover {
+  background: #ff9f9f;
+}
+.finder-head__controls-item-minimize:hover {
+  background: #ffe7b1;
+}
+.finder-head__controls-item-fullscreen:hover {
+  background: #a4f3b1;
+}
+
+.finder-head__toggles {
+  background: #eee;
+  display: inline-block;
+  height: 30px;
+  width: 60px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0 0 0 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.finder-head__toggles a {
+  float: left;
+  background: #0f0;
+  width: 30px;
+  height: 30px;
+  background: #e5e5e5;
+  position: relative;
+}
+
+.finder-head__toggles a:hover {
+  background: #e0e0e0;
+}
+
+.finder-head__toggles .finder-head__toggles-active {
+  background: #aaa;
+}
+
+.finder-head__toggles .finder-head__toggles-active:hover {
+  background: #aaa;
+}
+
+a.finder-head__toggle-list:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url('list.png');
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+a.finder-head__toggle-grid:after {
+  position: absolute;
+  content: '';
+  top: 8px;
+  left: 8px;
+  width: 15px;
+  height: 15px;
+  background-image: url('grid.png');
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+
+.finder-body {
+  height: 450px;
+  overflow-y: scroll;
+}
+
+.finder-body__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.list li {
+  cursor: pointer;
+  padding: 5px 0 5px 50px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  margin: 1px 0;
+}
+
+.list li:nth-child(odd) {
+  background: #f5f5f5;
+}
+
+.list li:before {
+  position: absolute;
+  content: '';
+  background-image: url('folder.png');
+  -webkit-background-size: cover;
+  background-size: cover;
+  top: 4px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
+}
+
+.list li:hover{ 
+  background: #eee;
+}
+
+.grid li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 90px 0 5px;
+  margin: 5px;
+  width: 100px;
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: top;
+}
+
+.grid li:before {
+  position: absolute;
+  content: '';
+  background-image: url('http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/512/Folder-icon.png');
+  -webkit-background-size: cover;
+  background-size: cover;
+  top: 4px;
+  left: 10px;
+  width: 80px;
+  height: 80px;
+}
+
+.choosen {
+  background: #1177ff !important;
+  color: #fff;
+}
